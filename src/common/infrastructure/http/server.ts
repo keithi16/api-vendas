@@ -1,7 +1,7 @@
+import { env } from '../env'
 import { app } from './app'
 
-const PORT = 3333
-
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}! 🏆`)
+app.listen(env.PORT, () => {
+  console.log(`Server is running on port ${env.PORT}! 🏆`)
+  console.log('API docs available at GET /docs')
 })
