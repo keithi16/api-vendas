@@ -21,5 +21,6 @@ export interface RepositoryInterface<Model, CreateProps> {
   insert(model: Model): Promise<Model>
   findById(id: string): Promise<Model>
   update(model: Model): Promise<Model>
-  delete(props: SearchInput): Promise<SearchOutput<Model>>
+  delete(id: string): Promise<void>
+  search(props: SearchInput): Promise<SearchOutput<Model>>
 }
